@@ -214,7 +214,9 @@ Configure these parameters to create connections to an Oracle database.
 
 == Operations
 
-NOTE: To specify an SQL function in an SQL query in an operation, specify the SQL function in the `{fn function()}` format. For example, the SQL function `CURRENT_TIMESTAMP` is specified as `{fn CURRENT_TIMESTAMP()}`.
+NOTE: To specify an SQL function in an SQL query in an operation, specify the SQL scalar function:
+* Oracle: in the `{fn function()}` format. For example, the SQL function `CURRENT_TIMESTAMP` is specified as `{fn CURRENT_TIMESTAMP()}` see (https://docs.oracle.com/cd/E13157_01/wlevs/docs30/jdbc_drivers/sqlescape.html#wp1055176).
+* DB2: in the scalar function format. For example: `set TI_LTS = TIMESTAMP(CURRENT TIMESTAMP)`, see (https://www.ibm.com/docs/en/db2-for-zos/13?topic=functions-scalar).
 
 * <<bulkDelete>>
 * <<bulkInsert>>
